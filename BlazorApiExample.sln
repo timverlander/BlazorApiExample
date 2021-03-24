@@ -9,6 +9,33 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApiExample.Models", "
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorApiExample.Web", "BlazorApiExample.Web\BlazorApiExample.Web.csproj", "{F7577D81-3725-4DB1-9B13-10AFBD335CDB}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SavedPage", "SavedPage", "{BA60CDBC-F5CD-44FA-AFF6-6F11816E4C95}"
+	ProjectSection(SolutionItems) = preProject
+		SavedPage\SavedPage.html = SavedPage\SavedPage.html
+		SavedPage\Screenshot.jpg = SavedPage\Screenshot.jpg
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "css", "css", "{FD741325-4BD7-4807-9C90-370986E95DB6}"
+	ProjectSection(SolutionItems) = preProject
+		SavedPage\css\BlazorApiExample.Web.styles.css = SavedPage\css\BlazorApiExample.Web.styles.css
+		SavedPage\css\bootstrap.min.css = SavedPage\css\bootstrap.min.css
+		SavedPage\css\site.css = SavedPage\css\site.css
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "svgs", "svgs", "{517C7DC3-CDFC-4754-A5E4-7541F8F87A85}"
+	ProjectSection(SolutionItems) = preProject
+		SavedPage\svgs\cloud-drizzle.svg = SavedPage\svgs\cloud-drizzle.svg
+		SavedPage\svgs\cloud-lightning.svg = SavedPage\svgs\cloud-lightning.svg
+		SavedPage\svgs\cloud-rain.svg = SavedPage\svgs\cloud-rain.svg
+		SavedPage\svgs\cloud-snow.svg = SavedPage\svgs\cloud-snow.svg
+		SavedPage\svgs\cloud.svg = SavedPage\svgs\cloud.svg
+		SavedPage\svgs\sun.svg = SavedPage\svgs\sun.svg
+		SavedPage\svgs\sunrise.svg = SavedPage\svgs\sunrise.svg
+		SavedPage\svgs\sunset.svg = SavedPage\svgs\sunset.svg
+		SavedPage\svgs\thermometer.svg = SavedPage\svgs\thermometer.svg
+		SavedPage\svgs\wind.svg = SavedPage\svgs\wind.svg
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,6 +57,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{FD741325-4BD7-4807-9C90-370986E95DB6} = {BA60CDBC-F5CD-44FA-AFF6-6F11816E4C95}
+		{517C7DC3-CDFC-4754-A5E4-7541F8F87A85} = {BA60CDBC-F5CD-44FA-AFF6-6F11816E4C95}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {671C8813-B4D7-4A0A-88E9-E5CF82815B19}
