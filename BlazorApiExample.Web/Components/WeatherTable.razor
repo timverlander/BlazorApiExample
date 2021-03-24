@@ -1,0 +1,19 @@
+﻿@using BlazorApiExample.Models
+
+<table class="table">
+    <thead>
+        <WeatherTableRow />
+    </thead>
+    <tbody>
+        @foreach (var forecast in Forecasts)
+        {
+            <WeatherTableRow Forecast="forecast" />
+        }
+    </tbody>
+</table>
+
+
+@code {
+    [Parameter]
+    public IEnumerable<WeatherForecast> Forecasts { get; set; }
+}

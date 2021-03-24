@@ -1,0 +1,26 @@
+﻿@using BlazorApiExample.Models
+
+@if (Forecast is null)
+{
+    <tr>
+        <th>Date</th>
+        <th>Temp. (C)</th>
+        <th>Temp. (F)</th>
+        <th>Summary</th>
+    </tr>
+}
+else
+{
+    <tr>
+        <td>@Forecast.Date.ToShortDateString()</td>
+        <td>@Forecast.TemperatureC</td>
+        <td>@Forecast.TemperatureF</td>
+        <td>@Forecast.Summary</td>
+    </tr>
+}
+
+@code {
+    [Parameter]
+    public WeatherForecast Forecast { get; set; }
+
+}

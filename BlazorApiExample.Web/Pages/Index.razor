@@ -1,0 +1,35 @@
+﻿@page "/"
+
+@* Add our namespaces *@
+@using BlazorApiExample.Models
+@using BlazorApiExample.Web.Components
+@using BlazorApiExample.Web.Data
+
+@* Use the global instance of WeatherClient that we created in startup.cs *@
+@inject WeatherClient Client
+
+
+@* Output our page, depending on whether our API data is loaded or not *@
+<h1>Weather forecast</h1>
+
+@if (forecasts?.Any() ?? false)
+{
+    <WeatherTable Forecasts="forecasts" />
+}
+else
+{
+    <p><em>Loading...</em></p>
+}
+
+
+@* Set up the vars we access, and when this page component is initialized make a call to the API *@
+@code {
+    private IList<WeatherForecast> forecasts;
+
+    protected override async Task OnInitializedAsync()
+    {
+        forecasts = new List<WeatherForecast>();
+        await foreach (var forecast in Client.GetWeatherForecastAsync().ConfigureAwait(false))
+            forecasts.Add(forecast);
+    }
+}
